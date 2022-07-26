@@ -107,56 +107,94 @@ const newObject = array => ({
 // Write your solutions on a single line wherever possible.
 
 
+let sum = (a,b,c,d) => `${a} + ${b} + ${c} + ${d}`;
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+// let sum = function(a, b, c, d) {
+//   return a + b + c + d;
+// };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
-
-
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
-
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+//TODO: Uncomment the following line of code to see the output in the browser console
+ console.log(sum(1, 2, 3, 4));
 
 
-let sumAndProduct = function(a, b) {
-  let sum = a + b;
-  let product = a * b;
-  return [sum, product];
-};
+// let objectLit = function() {
+//   return {
+//     key1: 'value1',
+//     key2: 'value2',
+//     key3: 'value3',
+//   };
+// };
+
+let objectLit = array => ({
+  key1: array[0],
+  key2: array[1],
+  key3: array[2]
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+ console.log(objectLit());
 
+//  const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
+//  const multiLiner = word => {
+//   word = word.toUpperCase();
+//   return word;
+// };
+let sumAndProduct = (sum,product) => {
+  sum = sum.a+b();
+  product = product.a*b();
+  return sum;product
 
-let message = function(name) {
-  return `Hello, ${name}!`;
 };
+
+
+// let sumAndProduct = function(a, b) {
+//   let sum = a + b;
+//   let product = a * b;
+//   return [sum, product];
+// };
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
-
-
-let Student = function(name, age, hometown) {
-  this.name = name;
-  this.age = age;
-  this.hometown = hometown;
+ console.log(sumAndProduct(3, 9));
+//  const theNewWay = (course) => {
+//   return `I am currently enrolled in ${course}`;
+// };
+let message = (name) => { 
+  return `Hello, ${name}`;
 };
 
-let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
+
+// TODO: Uncomment the following line of code to see the output in the browser console
+ console.log(message('Allie'));
+
+//  const newObject = array => ({
+//   firstValue: array[0],
+//   secondValue: array[1],
+//   thirdValue: array[2]
+// });
+let Student = array => ({ 
+  key: array[0],
+  key: array[1],
+  key: array[2]
+});
+// let Student = function(name, age, hometown) {
+//   this.name = name;
+//   this.age = age;
+//   this.hometown = hometown;
+// };
+// const oneLiner = course => `I cam currently enrolled in ${course}`;
+/// const add = function(num1, num2) {
+//   return `${num1} + ${num2} = ${num1 + num2}`;
+//}
+let joe = (name, age, hometown) => `${name} + ${ age} + ${ hometown}`;
+// let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-// console.log(joe);
+ console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -179,7 +217,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -190,7 +228,7 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
